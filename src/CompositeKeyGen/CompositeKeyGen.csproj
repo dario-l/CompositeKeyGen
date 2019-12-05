@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <Authors>Dariusz Lenartowicz</Authors>
+    <Company>Softio</Company>
+    <Description>Allows to create composite key encoded as Int64 (long).</Description>
+    <RepositoryUrl>https://github.com/dario-l/CompositeKeyGen</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/dario-l/CompositeKeyGen</PackageProjectUrl>
+  </PropertyGroup>
+
+</Project>
