@@ -29,6 +29,7 @@ Configuration defined above will give you the following maximum values:
 When you need to create key:
 ``` c#
 // Create key providing tenantId and sequenceId
+var nextSequenceId = _hiloGenerator.GetNext(); // this is your code :)
 var id = generator.Create(tenantId, nextSequenceId);
 ```
 
