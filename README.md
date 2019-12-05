@@ -1,4 +1,6 @@
 # CompositeKeyGen
+![https://img.shields.io/nuget/v/CompositeKeyGen](https://img.shields.io/nuget/v/CompositeKeyGen)
+
 Allows to create composite key encoded as Int64 (long).
 
 *Usually you should use these identifiers in domain objects (aggregates).*
