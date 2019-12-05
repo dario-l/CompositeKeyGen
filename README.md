@@ -15,7 +15,7 @@ This should be done once at application startup:
 var config = new MaskConfig(instanceBits: 5, tenantBits: 14);
 
 // Create key generator
-var serverId = _application.Configuration.GetServerId();
+var serverId = _application.Configuration.GetServerId(); // this is your code :)
 var generator = new KeyGenerator(serverId, config);
 ```
 
