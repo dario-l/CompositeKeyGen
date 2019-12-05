@@ -1,5 +1,5 @@
 # CompositeKeyGen
-![https://img.shields.io/nuget/v/CompositeKeyGen](https://img.shields.io/nuget/v/CompositeKeyGen)
+![CompositeKeyGen](https://img.shields.io/nuget/v/CompositeKeyGen)
 
 Allows to create composite key encoded as Int64 (long).
 
