@@ -7,6 +7,10 @@
     <Description>Allows to create composite key encoded as Int64 (long).</Description>
     <RepositoryUrl>https://github.com/dario-l/CompositeKeyGen</RepositoryUrl>
     <PackageProjectUrl>https://github.com/dario-l/CompositeKeyGen</PackageProjectUrl>
+    <PackageLicenseExpression></PackageLicenseExpression>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageReleaseNotes>Allows to create composite key encoded as Int64 (long).</PackageReleaseNotes>
+    <Copyright>Dariusz Lenartowicz</Copyright>
   </PropertyGroup>
 
 </Project>
