@@ -12,7 +12,7 @@ namespace CompositeKeyGen
         {
             Config = cfg ?? MaskConfig.Default;
 
-            if (instanceId > Config.InstanceMask)
+            if (instanceId < 0 && instanceId > Config.InstanceMask)
                 throw new ArgumentOutOfRangeException(
                     $"InstanceId overflow. Must be between 0 and {Config.InstanceMask} (inclusive).");
 
@@ -25,11 +25,11 @@ namespace CompositeKeyGen
 
         public long Create(int tenantId, long sequenceId)
         {
-            if (tenantId > Config.TenantMask)
+            if (tenantId < 0 && tenantId > Config.TenantMask)
                 throw new ArgumentOutOfRangeException(nameof(tenantId),
                     $"TenantId overflow. Must be between 0 and {Config.TenantMask} (inclusive).");
 
-            if (sequenceId > Config.SequenceMask)
+            if (sequenceId < 0 && sequenceId > Config.SequenceMask)
                 throw new ArgumentOutOfRangeException(nameof(sequenceId),
                     $"SequenceId overflow. Must be between 0 and {Config.SequenceMask} (inclusive).");
 
