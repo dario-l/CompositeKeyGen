@@ -48,10 +48,10 @@ Output for example data:
         sequenceId = 100;
 
     Created id will be:
-        id = 288406298012156004
+        long id = 288406298012156004
 ```
 
-When you need to verify key for given tenantId you cen reconstruct provided identifier:
+When you need to verify key for given tenantId you can reconstruct provided identifier:
 ``` c#
 CompositeKey reconstructed = generator.Reconstruct(id);
 if (reconstructed.TenantId != _userContext.TenantId) throw...
