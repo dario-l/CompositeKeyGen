@@ -14,22 +14,23 @@ namespace CompositeKeyGen.Example
             Console.WriteLine("Max int        : {0}\t\t{1}", int.MaxValue, ToBinary(int.MaxValue));
             Console.WriteLine();
 
-            byte instanceId = (byte)config.InstanceMask;
-            ushort tenantId = (ushort)config.TenantMask;
-            long maxSequenceId = config.SequenceMask;
+            const byte instanceId = 1;
+            const ushort tenantId = 10;
+            const long sequenceId = 100;
 
             var generator = new KeyGenerator(instanceId, config);
             Console.WriteLine(generator.Config);
-            Console.WriteLine();
             Console.WriteLine(generator.Config.GetSummary());
 
-            var oryginal = generator.Create(tenantId, maxSequenceId);
-            var reconstructed = generator.Reconstruct(oryginal);
+            var oryginal = generator.Create(tenantId, sequenceId);
+            CompositeKey reconstructed = generator.Reconstruct(oryginal);
 
             Console.WriteLine();
-            Console.WriteLine("Oryginal      : \tInstanceId:{0}\tTenantId:{1}\tId:{2}",
-                instanceId, tenantId, maxSequenceId);
-            Console.WriteLine("Reconstructed : \tInstanceId:{0}\tTenantId:{1}\tId:{2}",
+            Console.WriteLine();
+            Console.WriteLine("For given values       : InstanceId:{0}\tTenantId:{1}\tSequenceId:{2}",
+                instanceId, tenantId, sequenceId);
+            Console.WriteLine("Created key will be    : {0}", oryginal);
+            Console.WriteLine("Reconstructed from key : InstanceId:{0}\tTenantId:{1}\tSequenceId:{2}",
                 reconstructed.InstanceId, reconstructed.TenantId, reconstructed.SequenceId);
 
             Console.WriteLine();

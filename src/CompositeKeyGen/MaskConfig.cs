@@ -35,7 +35,7 @@ namespace CompositeKeyGen
         public string GetSummary()
         {
             return
-                $"Max values:\r\n\tInstanceId:\t{InstanceMask}\r\n\tTenantId:\t{TenantMask}\r\n\tSequenceId:\t{SequenceMask}\r\n\r\n\tSequenceId diff to int.MaxValue: {(SequenceMask / int.MaxValue):0.0}";
+                $"Max values:\r\n\tInstanceId:\t{InstanceMask}\r\n\tTenantId:\t{TenantMask}\r\n\tSequenceId:\t{SequenceMask}\r\n\tSequenceId diff to int.MaxValue: {(SequenceMask / int.MaxValue):0.0}";
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]

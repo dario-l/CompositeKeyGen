@@ -5,7 +5,12 @@ VisualStudioVersion = 16.0.29519.181
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CompositeKeyGen", "CompositeKeyGen\CompositeKeyGen.csproj", "{82B22884-1616-4B02-A6FC-53C4586CBCCD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompositeKeyGen.Example", "CompositeKeyGen.Example\CompositeKeyGen.Example.csproj", "{91415CEA-4987-492D-9665-2D4486A733F7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CompositeKeyGen.Example", "CompositeKeyGen.Example\CompositeKeyGen.Example.csproj", "{91415CEA-4987-492D-9665-2D4486A733F7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3429565C-E314-4CA5-9669-62496A31A3DF}"
+	ProjectSection(SolutionItems) = preProject
+		..\README.md = ..\README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

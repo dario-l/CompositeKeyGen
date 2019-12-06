@@ -10,7 +10,7 @@ Each key is composed from 3 elements:
 - tenantId - could be tenant identifier
 - sequenceId - incrementing identifier from other source
 
-## Usage
+## Configuration
 This should be done once at application startup:
 ``` c#
 // Define configuration
@@ -28,16 +28,32 @@ Configuration defined above will give you the following maximum values:
    Max SequenceId:     17592186044415
 ```
 
+For given configuration max sequenceId will be 8192 times bigger than int.MaxValue.
+
+## Usage
+
 When you need to create key:
 ``` c#
 // Create key providing tenantId and sequenceId
-var nextSequenceId = _hiloGenerator.GetNext(); // this is your code :)
-var id = generator.Create(tenantId, nextSequenceId);
+var sequenceId = _hiloGenerator.GetNext(); // this is your code :)
+var id = generator.Create(tenantId, sequenceId);
+```
+*Instead of HiLo you can use [LinearKeyAllocator](https://github.com/dario-l/LinearKeyAllocator).*
+
+Output for example data:
+```
+    For:
+        instanceId = 1;
+        tenantId = 10;
+        sequenceId = 100;
+
+    Created id will be:
+        id = 288406298012156004
 ```
 
-When you need to verify key for given tenantId:
+When you need to verify key for given tenantId you cen reconstruct provided identifier:
 ``` c#
-var reconstructed = generator.Reconstruct(id);
+CompositeKey reconstructed = generator.Reconstruct(id);
 if (reconstructed.TenantId != _userContext.TenantId) throw...
 ```
 
