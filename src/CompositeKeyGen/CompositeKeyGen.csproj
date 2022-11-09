@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>netstandard2.0</TargetFramework>
     <Authors>Dariusz Lenartowicz</Authors>
     <Company>Softio</Company>
     <Description>Allows to create composite key encoded as Int64 (long).</Description>
